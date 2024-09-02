@@ -387,7 +387,7 @@ test('AppFunctional is a functional component', () => {
         fireEvent.click(up)
         fireEvent.change(email, { target: { value: 'lady@gaga.com' } })
         fireEvent.click(submit)
-        await screen.findByText('lady win #29', queryOptions, waitForOptions)
+        await screen.findByText('lady win #31', queryOptions, waitForOptions)
       })
       test(`[F2 ${label}] Actions: down, down, type email, submit
           Success message is correct`, async () => {
@@ -395,7 +395,7 @@ test('AppFunctional is a functional component', () => {
         fireEvent.click(down)
         fireEvent.change(email, { target: { value: 'lady@gaga.com' } })
         fireEvent.click(submit)
-        await screen.findByText('lady win #45', queryOptions, waitForOptions)
+        await screen.findByText('lady win #43', queryOptions, waitForOptions)
       })
       test(`[F3 ${label}] Actions: up, down, left, right, type email, submit
           Success message is correct`, async () => {
@@ -435,7 +435,7 @@ test('AppFunctional is a functional component', () => {
         fireEvent.click(left)
         fireEvent.change(email, { target: { value: 'lady@gaga.com' } })
         fireEvent.click(submit)
-        await screen.findByText('lady win #31', queryOptions, waitForOptions)
+        await screen.findByText('lady win #29', queryOptions, waitForOptions)
         expect(email.value).toBeFalsy()
       })
       test(`[F8 ${label}] Actions: up, right, type valid email, submit
@@ -444,7 +444,7 @@ test('AppFunctional is a functional component', () => {
         fireEvent.click(right)
         fireEvent.change(email, { target: { value: 'lady@gaga.com' } })
         fireEvent.click(submit)
-        await screen.findByText('lady win #43', queryOptions, waitForOptions)
+        await screen.findByText('lady win #49', queryOptions, waitForOptions)
         expect(coordinates.textContent).toMatch(/\(3.*1\)$/)
         expect(steps.textContent).toBe('You moved 2 times')
       })
